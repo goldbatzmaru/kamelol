@@ -49,7 +49,7 @@ Session.vim
 /content/data/*
 /content/logs/*
 /content/apps/**/*
-/content/themes/**/*
+#/content/themes/**/*
 /content/images/**/*
 /content/adapters/storage/**/*
 /content/adapters/scheduling/**/*

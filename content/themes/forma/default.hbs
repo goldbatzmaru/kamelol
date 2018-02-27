@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{{!-- Document Settings --}}
+	<meta charset="utf-8">
+
+	{{!-- Page Meta --}}
+	<title>{{meta_title}}</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	{{!-- Styles --}}
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic%7CCousine:400,400italic,700,700italic" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
+
+	{{!-- Theme settings --}}
+	<script type="text/javascript">
+		var disqus_shortname = 'my_disqus_shortname', // replace my_disqus_shortname with your shortname
+			instagram_user_id = '6073275416', // add your Instagram user ID
+			instagram_access_token = '6073275416.1677ed0.c95671b9a8df4f5da1e906290fb4abed'; // add your Instagram access token
+	</script>
+
+	{{!-- Ghost outputs important style and meta data with this tag --}}
+	{{ghost_head}}
+</head>
+<body class="{{body_class}}">
+	<div id="page" class="site">
+		{{!-- The tag below includes the theme header - partials/header.hbs --}}
+		{{> header}}
+		{{!-- Everything else gets inserted here --}}
+		{{{body}}}
+		{{!-- The tag below includes the theme header - partials/sidebar.hbs --}}
+		{{> sidebar}}
+		{{!-- The tag below includes the theme footer - partials/footer.hbs --}}
+		{{> footer}}
+		{{!-- The tag below includes the search - partials/search-box.hbs --}}
+		{{> search-box}}
+		<div id="site-overlay" class="site-overlay"></div>
+	</div><!-- #page -->
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	{{!-- Ghost outputs important scripts and data with this tag --}}
+	{{ghost_foot}}
+
+	{{!-- JavaScript files --}}
+	<script type="text/javascript" src="{{asset "js/plugins.js"}}"></script>
+	<script type="text/javascript" src="{{asset "js/custom.js"}}"></script>
+</body>
+</html>
