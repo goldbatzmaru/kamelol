@@ -1,2 +1,0 @@
-# kamelol
-Kame Productions Blog
