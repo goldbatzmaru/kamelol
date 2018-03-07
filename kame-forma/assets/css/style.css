@@ -2002,7 +2002,7 @@ a.post-thumbnail:hover img {
 }
 
 #event-list .event {
-
+	margin-bottom: 8px;
 }
 
 #event-list .event .event-inner-wrapper {
@@ -2029,11 +2029,7 @@ a.post-thumbnail:hover img {
     font-weight: 600;
 }
 
-#event-list .event .acts .act {
-	
-}
-
-#event-list .event .acts .act a {
+#event-list .event .acts a {
 	color: #fff;
 	border-bottom: 1px solid #fff;
 }

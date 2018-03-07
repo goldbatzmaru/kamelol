@@ -94,8 +94,13 @@
 		if (typeof eventList !== 'undefined'){
 			if(eventList !== null){
 				var events = createEventList(eventList);
-				// console.log(events);
-				$("#calendar-description").after(createEventList(eventList));	
+				$("#calendar-description").after(createEventList(eventList));
+
+				 var container = document.querySelector('#event-list');
+				  var masonry = new Masonry(container, {
+				    itemSelector: '.event',
+				    percentPosition: true
+				  });	
 			}
 		}
 		
@@ -182,7 +187,7 @@
 
 		var eventList = '<ul id="event-list">';
         $.each(events['event-list'],function(index, value){
-        	var event = '<li class="event col-sm-4 col-xs-12"><div class = "event-inner-wrapper">';
+        	var event = '<li class="event col-sm-6 col-xs-12"><div class = "event-inner-wrapper">';
         	if(value['title'] != null){
         		var eventTitle = '<div class="event-title">'+value['title']+'</div>';
 				event += eventTitle;
@@ -190,10 +195,16 @@
 
         	if(value['acts'] != null){
         		var acts = '<div class="acts">';
+        		var actCount = 0;
+        		var actAmount = value['acts'].length;
     			$.each(value['acts'], function(x, y){
-					var act = '<div class="act">';
-					act += '<a href="'+y['url_1']+'" class="act-title">'+y['title']+'</a></div>';
+					var act = '<a href="'+y['url_1']+'" class="act-title">'+y['title']+'</a>';
+					actCount++;
+					if(actCount != actAmount){
+						act += ', ';
+					}
 					acts += act;
+					
     			});
     			acts += '</div>';
     			event += acts;
