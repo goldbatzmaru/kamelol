@@ -1991,17 +1991,24 @@ a.post-thumbnail:hover img {
 
 #event-list {
 	display: block;
-    width: 100%;
+	width: 91%;
     height: 100%;
     overflow: auto;
 	list-style: none;
 	padding-left: 0;
 	color: #fff;
 	letter-spacing: 1px;
+	margin: 0 auto;
 }
 
 #event-list .event {
-	margin-bottom: 8px;
+	position: relative;
+	float: left;
+	width: 32.3%;
+	min-height: 100px;
+	height: auto;
+	margin: 0;
+	padding: 5px;
 }
 
 #event-list .event .event-inner-wrapper {
@@ -2171,6 +2178,12 @@ a.post-thumbnail:hover img {
 	}
 }
 
+@media only screen and (max-width: 1098px) {
+	#event-list .event {
+		width: 47%;
+	}
+}
+
 @media only screen and (max-width: 900px) {
 	.slider-loading,
 	.featured-slider .slick-slide {
@@ -2240,10 +2253,10 @@ a.post-thumbnail:hover img {
 
 @media only screen and (max-width: 767px) {
 	#event-list .event {
-	    margin-bottom: 16px;
+	    margin-bottom: 5px;
+		width: 100%;
 	}
 }
-
 
 @media only screen and (max-width: 640px) {
 	.not-found .page-title {

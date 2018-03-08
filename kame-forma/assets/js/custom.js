@@ -96,11 +96,32 @@
 				var events = createEventList(eventList);
 				$("#calendar-description").after(events);
 
-				 var container = document.querySelector('#event-list');
-				  var masonry = new Masonry(container, {
-				    itemSelector: '.event',
-				    percentPosition: true
-				  });	
+                // init Isotope
+
+                var $grid = $('#event-list').isotope({
+                    itemSelector: '.event',
+                    layoutMode: 'fitRows',
+                    masonry: {
+                        columnWidth: 100,
+                        horizontalOrder: true
+                    }
+                });
+
+				// bind filter button click
+                $('.filters-button-group').on( 'click', 'button', function() {
+                    var filterValue = $( this ).attr('data-filter');
+                    // use filterFn if matches value
+                    $grid.isotope({ filter: filterValue });
+                });
+
+				// change is-checked class on buttons
+                $('.button-group').each( function( i, buttonGroup ) {
+                    var $buttonGroup = $( buttonGroup );
+                    $buttonGroup.on( 'click', 'button', function() {
+                        $buttonGroup.find('.is-checked').removeClass('is-checked');
+                        $( this ).addClass('is-checked');
+                    });
+                });
 			}
 		}
 		
@@ -243,7 +264,7 @@
     		var timeCheck = value.time != null;
 
     		if(timeCheck) {
-    			time = value.time[0];
+    			var time = value.time[0];
     			var monthYear = [time.year,time.month];
 				if (!searchForArray(monthYears, monthYear)){
 					monthYears.push(monthYear);
@@ -254,11 +275,11 @@
     	var filterArea = '<div class="button-group filter-button-group"><button data-filter="*">All</button>';
 
     	$.each(monthYears,function(x, y){
-    		var date = new Date(y[0], y[1]);
+    		var date = new Date(y[0], (y[1]-1));
     		var monthName = getMonthName(date);
     		var monthyear = 'monthyear-' + (date.getMonth()+1) + '-' + date.getFullYear();
     		var filterButton = '<button data-filter=".' + monthyear + '">'+ monthName +' '+ date.getFullYear()+ '</button>';
-			filterArea += filterButton
+			filterArea += filterButton;
     	});
 
     	filterArea += '</div>';
@@ -283,7 +304,7 @@
             }
 
 			if(!isDateInPast(time.month+'-'+time.day+'-'+time.year)){
-	        	var event = '<li class="event col-sm-6 col-xs-12 ' + dateClasses +'"><div class = "event-inner-wrapper">';
+	        	var event = '<li class="event ' + dateClasses +'"><div class = "event-inner-wrapper">';
 	            if(timeCheck){
 	            	var monthName = getMonthName(time.month+'-'+time.day+'-'+time.year);
 	                event += '<div class="event-date">'+monthName+' '+time.day+', '+time.year+'</div>';
