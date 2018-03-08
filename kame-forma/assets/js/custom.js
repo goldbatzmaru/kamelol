@@ -94,7 +94,7 @@
 		if (typeof eventList !== 'undefined'){
 			if(eventList !== null){
 				var events = createEventList(eventList);
-				$("#calendar-description").after(createEventList(eventList));
+				$("#calendar-description").after(events);
 
 				 var container = document.querySelector('#event-list');
 				  var masonry = new Masonry(container, {
@@ -183,13 +183,25 @@
 		});
 	}
 
+	function searchForArray(haystack, needle){
+		a = JSON.stringify(haystack);
+     	b = JSON.stringify(needle);
+	   var c = a.indexOf(b);
+	    if(c != -1){
+	    	return true;
+    	} else {
+    		return false;
+    	}
+	}
+
 	function getDateClasses(date){
         date = new Date(date);
-        var month = 'month-' + date.getMonth() + 1;
+
+        var monthyear = 'monthyear-' + (date.getMonth()+1) + '-' + date.getFullYear();
         var day = 'day-' + date.getDate();
         var year = 'year-' + date.getFullYear();
 
-        return month + ' ' + day + ' ' + year;
+        return monthyear + ' ' + day;
 	}
 
 	function getMonthName(date){
@@ -212,8 +224,49 @@
 
 	}
 
-    function createEventList(events){
+	function isDateInPast(date){
+		date = new Date(date).setHours(0,0,0,0);
+		var currentDate = new Date().setHours(0,0,0,0);
+		if(date > currentDate) {
+			return false;
+		} else {
+			return true;
+		}
+	}
 
+	function createFilters(events){
+
+		var monthYears = [];
+		
+
+    	$.each(events['event-list'],function(index, value){
+    		var timeCheck = value.time != null;
+
+    		if(timeCheck) {
+    			time = value.time[0];
+    			var monthYear = [time.year,time.month];
+				if (!searchForArray(monthYears, monthYear)){
+					monthYears.push(monthYear);
+				}
+    		}
+    	});
+
+    	var filterArea = '<div class="button-group filter-button-group"><button data-filter="*">All</button>';
+
+    	$.each(monthYears,function(x, y){
+    		var date = new Date(y[0], y[1]);
+    		var monthName = getMonthName(date);
+    		var monthyear = 'monthyear-' + (date.getMonth()+1) + '-' + date.getFullYear();
+    		var filterButton = '<button data-filter=".' + monthyear + '">'+ monthName +' '+ date.getFullYear()+ '</button>';
+			filterArea += filterButton
+    	});
+
+    	filterArea += '</div>';
+    	return filterArea;
+	}
+
+    function createEventList(events){
+    	var filters = createFilters(events);
 		var eventList = '<ul id="event-list">';
         $.each(events['event-list'],function(index, value){
         	var dateClasses = null;
@@ -229,69 +282,76 @@
                 dateClasses = getDateClasses(time.month+'-'+time.day+'-'+time.year);
             }
 
-        	var event = '<li class="event col-sm-6 col-xs-12 ' + dateClasses +'"><div class = "event-inner-wrapper">';
-            if(timeCheck){
-            	var monthName = getMonthName(time.month+'-'+time.day+'-'+time.year);
-                event += '<div class="event-date">'+monthName+' '+time.day+', '+time.year+'</div>';
-            }
-        	if(value.title != null){
-				event += '<div class="event-title">'+value.title+'</div>';
-        	}
+			if(!isDateInPast(time.month+'-'+time.day+'-'+time.year)){
+	        	var event = '<li class="event col-sm-6 col-xs-12 ' + dateClasses +'"><div class = "event-inner-wrapper">';
+	            if(timeCheck){
+	            	var monthName = getMonthName(time.month+'-'+time.day+'-'+time.year);
+	                event += '<div class="event-date">'+monthName+' '+time.day+', '+time.year+'</div>';
+	            }
+	        	if(value.title != null){
+					event += '<div class="event-title">'+value.title+'</div>';
+	        	}
 
-        	if(value.acts != null){
-        		var acts = '<div class="acts">';
-        		var actCount = 0;
-        		var actAmount = value.acts.length;
-    			$.each(value.acts, function(x, y){
-					var act = '<a href="'+y.url_1+'" class="act-title">'+y.title+'</a>';
-					actCount++;
-					if(actCount != actAmount){
-						act += ', ';
-					}
-					acts += act;
-					
-    			});
-    			acts += '</div>';
-    			event += acts;
-        	}
+	        	if(value.acts != null){
+	        		var acts = '<div class="acts">';
+	        		var actCount = 0;
+	        		var actAmount = value.acts.length;
+	    			$.each(value.acts, function(x, y){
+						var act = '<a href="'+y.url_1+'" class="act-title">'+y.title+'</a>';
+						actCount++;
+						if(actCount != actAmount){
+							act += ', ';
+						}
+						acts += act;
+						
+	    			});
+	    			acts += '</div>';
+	    			event += acts;
+	        	}
 
-        	if(locationCheck){
-				var eventLocation = '<div class="event-location"><div class="location-name">'+location.name+'</div><div class="event-address">';
-        		var addressGiven = (location.address_given == 'true');
+	        	if(locationCheck){
+					var eventLocation = '<div class="event-location"><div class="location-name">'+location.name+'</div><div class="event-address">';
+	        		var addressGiven = (location.address_given == 'true');
 
-        		if((addressGiven == false) || (addressGiven == null)){
-        			eventLocation += '<div class="address-hint">'+location.address_hint+'</div>';
-        		} else {
-        			eventLocation += '<div class="street">'+location.street+'</div>';
-        			eventLocation += '<div class="city-state">'+location.city+', '+location.state+'</div>';
-        			eventLocation += '<div class="zip">'+location.zipcode+'</div>';
-        		}
-        		eventLocation += '</div></div>';
-    			event += eventLocation;
-        	}
+	        		if((addressGiven == false) || (addressGiven == null)){
+	        			eventLocation += '<div class="address-hint">'+location.address_hint+'</div>';
+	        		} else {
+	        			eventLocation += '<div class="street">'+location.street+'</div>';
+	        			eventLocation += '<div class="city-state">'+location.city+', '+location.state+'</div>';
+	        			eventLocation += '<div class="zip">'+location.zipcode+'</div>';
+	        		}
+	        		eventLocation += '</div></div>';
+	    			event += eventLocation;
+	        	}
 
-        	if(timeCheck){
-				var schedule = '<div class="time">';
-				// schedule += '<div class="date">'+time['day']+'/'+time['month']+'/'+time['year']+'</div>';
-				schedule += '<div class="doors">Doors at '+time.doors+'</div>';
-				schedule += '<div class="duration">'+ time.music_start + ' - ' + time.music_end + '</div></div>';
-				event += schedule;
-        	}
-        	if(value.cover != null){
-    			event += '<div class="cover">'+value.cover+'</div>';
-        	}
-        	if(value.age_policy != null){
-        		event += '<div class="age-policy">'+value.age_policy+'</div>';
-        	}
-        	if(value.additional_info != null){
-        		event += '<div class="add-info">'+value.additional_info+'</div>';
-        	}
-        	event += '</div></li>';
-			eventList += event;
+	        	if(timeCheck){
+					var schedule = '<div class="time">';
+					// schedule += '<div class="date">'+time['day']+'/'+time['month']+'/'+time['year']+'</div>';
+					schedule += '<div class="doors">Doors at '+time.doors+'</div>';
+					schedule += '<div class="duration">'+ time.music_start + ' - ' + time.music_end + '</div></div>';
+					event += schedule;
+	        	}
+	        	if(value.cover != null){
+	    			event += '<div class="cover">'+value.cover+'</div>';
+	        	}
+	        	if(value.age_policy != null){
+	        		event += '<div class="age-policy">'+value.age_policy+'</div>';
+	        	}
+	        	if(value.additional_info != null){
+	        		event += '<div class="add-info">'+value.additional_info+'</div>';
+	        	}
+	        	event += '</div></li>';
+				eventList += event;
+			}
+
         });
 		eventList += '</ul>';
-
-		return eventList;
+		var calendar;
+		if(filters != null){
+			calendar = filters;
+		}
+		calendar += eventList;
+		return calendar;
 	}	
 
 })(jQuery);

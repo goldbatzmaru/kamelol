@@ -1,0 +1,631 @@
+
+<script>
+var eventList = {
+  "event-list":[
+    // start of an event
+        {
+            "location": [
+                {
+                    "name": "Kame House",
+                    "address_given": "false",
+                    "address_hint": "In the CD (for address, ask a friend or message a host)",
+                    "street": "",
+                    "state_province": "",
+                    "city": "",
+                    "zipcode": "",
+                    "country": "USA"
+                }
+            ],
+            "age_policy": "All Ages / Alcohol allowed if 21+",
+            "cover": "$5-10 Donation",
+            "time": [
+                {
+                    "doors": "8pm",
+                    "music_start": "9pm",
+                    "music_end": "11:30pm",
+                    "event_end": "12am",
+                    "day": 9,
+                    "month": 3,
+                    "year": 2018
+                }
+            ],
+            "acts": [
+                {
+                    "title": "Donormaal",
+                    "url_1": "https://www.facebook.com/donormaal/",
+                    "url_2": "https://soundcloud.com/donormaal"
+                },
+                {
+                    "title": "Taylar Elizza Beth",
+                    "url_1": "https://www.facebook.com/taylarelizzabeth/",
+                    "url_2": "https://www.taylarelizzabeth.com/"
+                },
+                {
+                    "title": "Tay Sean",
+                    "url_1": "https://www.facebook.com/swannyswannyswanny/",
+                    "url_2": "http://taysean.com/"
+                },
+                {
+                    "title": "West Hell",
+                    "url_1": "https://www.facebook.com/westhellusa/",
+                    "url_2": ""
+                }
+            ]
+        },
+          // start of an event
+        {
+            "location": [
+                {
+                    "name": "Kame House",
+                    "address_given": "false",
+                    "address_hint": "In the CD (for address, ask a friend or message a host)",
+                    "street": "",
+                    "state_province": "",
+                    "city": "",
+                    "zipcode": "",
+                    "country": "USA"
+                }
+            ],
+            "age_policy": "All Ages / Alcohol allowed if 21+",
+            "cover": "$5-10 Donation",
+            "time": [
+                {
+                    "doors": "8pm",
+                    "music_start": "9pm",
+                    "music_end": "11:30pm",
+                    "event_end": "12am",
+                    "day": 17,
+                    "month": 3,
+                    "year": 2018
+                }
+            ],
+            "acts": [
+                {
+                    "title": "Geist & the Sacred Ensemble",
+                    "url_1": " http://www.geistandthesacredensemble.com/"
+                },
+                {
+                    "title": "Nostalgist",
+                    "url_1": "nostalgist.bandcamp.com"
+                },
+                {
+                    "title": "Grey Waves",
+                    "url_1": "https://greywaves.bandcamp.com/"
+                }
+            ]
+        },
+          // start of an event
+        {
+            "location": [
+                {
+                    "name": "Kame House",
+                    "address_given": "false",
+                    "address_hint": "In the CD (for address, ask a friend or message a host)",
+                    "street": "",
+                    "state_province": "",
+                    "city": "",
+                    "zipcode": "",
+                    "country": "USA"
+                }
+            ],
+            "age_policy": "All Ages / Alcohol allowed if 21+",
+            "cover": "$5-10 Donation",
+            "time": [
+                {
+                    "doors": "8pm",
+                    "music_start": "9pm",
+                    "music_end": "11:30pm",
+                    "event_end": "12am",
+                    "day": 23,
+                    "month": 3,
+                    "year": 2018
+                }
+            ],
+            "acts": [
+                {
+                    "title": "Profligate",
+                    "url_1": "http://profligate.bandcamp.com/"
+                },
+                {
+                    "title": "Fake Trade",
+                    "url_1": "https://faketrade.bandcamp.com/releases"
+                },
+                {
+                    "title": "Harsh R",
+                    "url_1": "https://harshr.bandcamp.com/"
+                }
+            ]
+        },
+        // end of an event
+        // start of an event...
+        {
+            "location": [
+                {
+                    "name": "Kame House",
+                    "address_given": "false",
+                    "address_hint": "In the CD (for address, ask a friend or message a host)",
+                    "street": "",
+                    "state_province": "",
+                    "city": "",
+                    "zipcode": "",
+                    "country": "USA"
+                }
+            ],
+            "age_policy": "All Ages / Alcohol allowed if 21+",
+            "cover": "$5-10 Donation",
+            "time": [
+                {
+                    "doors": "8pm",
+                    "music_start": "9pm",
+                    "music_end": "11:30pm",
+                    "event_end": "12am",
+                    "day": 24,
+                    "month": 3,
+                    "year": 2018
+                }
+            ],
+            "acts": [
+                {
+                    "title": "Señor Fin",
+                    "url_1": "https://senorfin.bandcamp.com/"
+                },
+                {
+                    "title": "Eldren",
+                    "url_1": "http://www.eldrenband.com/"
+                },
+                {
+                    "title": "Sawtooth",
+                    "url_1": "https://sawtoothfolk.bandcamp.com/"
+                }
+            ]
+        },
+        // end of an event
+        // start of an event...
+        {
+            "location": [
+                {
+                    "name": "Kame House",
+                    "address_given": "false",
+                    "address_hint": "In the CD (for address, ask a friend or message a host)",
+                    "street": "",
+                    "state_province": "",
+                    "city": "",
+                    "zipcode": "",
+                    "country": "USA"
+                }
+            ],
+            "age_policy": "All Ages / Alcohol allowed if 21+",
+            "cover": "$5-10 Donation",
+            "additional_info": "Release party for Nordra's 'I Was Meant To Live In A Garden' on SIGE Records!",
+            "time": [
+                {
+                    "doors": "8pm",
+                    "music_start": "9pm",
+                    "music_end": "11:30pm",
+                    "event_end": "12am",
+                    "day": 31,
+                    "month": 3,
+                    "year": 2018
+                }
+            ],
+            "acts": [
+                {
+                    "title": "Nordra",
+                    "url_1": "https://nordra.bandcamp.com/"
+                },
+                {
+                    "title": "Casual Hex",
+                    "url_1": "https://casualhex.bandcamp.com/"
+                },
+                {
+                    "title": "BOD",
+                    "url_1": "https://bodcamp.bandcamp.com/"
+                },
+                {
+                    "title": "Death Mask",
+                    "url_1": "https://soundcloud.com/foul_diatribes/time-to-act"
+                },
+                {
+                    "title": "Spacefiller (visuals)",
+                    "url_1": "http://spacefiller.space/"
+                }
+            ]
+        },
+                // start of an event...
+        {
+            "location": [
+                {
+                    "name": "Kame House",
+                    "address_given": "false",
+                    "address_hint": "In the CD (for address, ask a friend or message a host)",
+                    "street": "",
+                    "state_province": "",
+                    "city": "",
+                    "zipcode": "",
+                    "country": "USA"
+                }
+            ],
+            "age_policy": "All Ages / Alcohol allowed if 21+",
+            "cover": "$5-10 Donation",
+            "time": [
+                {
+                    "doors": "8pm",
+                    "music_start": "9pm",
+                    "music_end": "11:30pm",
+                    "event_end": "12am",
+                    "day": 7,
+                    "month": 4,
+                    "year": 2018
+                }
+            ],
+            "acts": [
+                {
+                    "title": "Sloucher",
+                    "url_1": "https://sloucherband.bandcamp.com/"
+                },
+                {
+                    "title": "Olivia White",
+                    "url_1": "oliviawhite.bandcamp.com"
+                },
+                {
+                    "title": "Baby Jessica",
+                    "url_1": "https://babyjessica.bandcamp.com/"
+                },
+                {
+                    "title": "Spacefiller (visuals)",
+                    "url_1": "http://spacefiller.space/"
+                }
+            ]
+        },
+        // end of an event
+        // start of an event...
+        {
+            "location": [
+                {
+                    "name": "Kame House",
+                    "address_given": "false",
+                    "address_hint": "In the CD (for address, ask a friend or message a host)",
+                    "street": "",
+                    "state_province": "",
+                    "city": "",
+                    "zipcode": "",
+                    "country": "USA"
+                }
+            ],
+            "age_policy": "All Ages / Alcohol allowed if 21+",
+            "cover": "$5-10 Donation",
+            "time": [
+                {
+                    "doors": "8pm",
+                    "music_start": "9pm",
+                    "music_end": "11:30pm",
+                    "event_end": "12am",
+                    "day": 13,
+                    "month": 4,
+                    "year": 2018
+                }
+            ],
+            "acts": [
+                {
+                    "title": "Big Debbie",
+                    "url_1": "https://bigdebbie.bandcamp.com/"
+                },
+                {
+                    "title": "Beast Nest",
+                    "url_1": "http://beastnest.bandcamp.com/"
+                },
+                {
+                    "title": "Bloom Offering",
+                    "url_1": "http://bloom-offering.bandcamp.com/"
+                },
+                {
+                    "title": "Tengu Yawn",
+                    "url_1": "https://soundcloud.com/tenguyawn"
+                }
+            ]
+        },
+        // end of an event
+        // start of an event...
+        {
+            "location": [
+                {
+                    "name": "Kame House",
+                    "address_given": "false",
+                    "address_hint": "In the CD (for address, ask a friend or message a host)",
+                    "street": "",
+                    "state_province": "",
+                    "city": "",
+                    "zipcode": "",
+                    "country": "USA"
+                }
+            ],
+            "age_policy": "All Ages / Alcohol allowed if 21+",
+            "cover": "$5-10 Donation",
+            "time": [
+                {
+                    "doors": "8pm",
+                    "music_start": "9pm",
+                    "music_end": "11:30pm",
+                    "event_end": "12am",
+                    "day": 14,
+                    "month": 4,
+                    "year": 2018
+                }
+            ],
+            "acts": [
+                {
+                    "title": "Diesel Dudes",
+                    "url_1": "https://dieseldudes.bandcamp.com/"
+                },
+                {
+                    "title": "Sashcloth & Axes",
+                    "url_1": "https://sashclothaxes1.bandcamp.com/"
+                },
+                {
+                    "title": "Dyed",
+                    "url_1": "https://dyed.bandcamp.com/"
+                }
+            ]
+        },
+        // end of an event
+        // start of an event...
+        {
+            "location": [
+                {
+                    "name": "Kame House",
+                    "address_given": "false",
+                    "address_hint": "In the CD (for address, ask a friend or message a host)",
+                    "street": "",
+                    "state_province": "",
+                    "city": "",
+                    "zipcode": "",
+                    "country": "USA"
+                }
+            ],
+            "age_policy": "All Ages / Alcohol allowed if 21+",
+            "cover": "$5-10 Donation",
+            "time": [
+                {
+                    "doors": "8pm",
+                    "music_start": "9pm",
+                    "music_end": "11:30pm",
+                    "event_end": "12am",
+                    "day": 21,
+                    "month": 4,
+                    "year": 2018
+                }
+            ],
+            "acts": [
+                {
+                    "title": "Spirit Award",
+                    "url_1": "https://www.spiritaward.band/"
+                },
+                {
+                    "title": "Wolcott's Instant Pain Annihilator",
+                    "url_1": "https://soundcloud.com/wolcottsmith"
+                },
+                {
+                    "title": "Feed",
+                    "url_1": "https://feedband.bandcamp.com/"
+                }
+            ]
+        },
+        // end of an event
+        // start of an event...
+        {
+            "location": [
+                {
+                    "name": "Kame House",
+                    "address_given": "false",
+                    "address_hint": "In the CD (for address, ask a friend or message a host)",
+                    "street": "",
+                    "state_province": "",
+                    "city": "",
+                    "zipcode": "",
+                    "country": "USA"
+                }
+            ],
+            "age_policy": "All Ages / Alcohol allowed if 21+",
+            "cover": "$5-10 Donation",
+            "time": [
+                {
+                    "doors": "8pm",
+                    "music_start": "9pm",
+                    "music_end": "11:30pm",
+                    "event_end": "12am",
+                    "day": 11,
+                    "month": 5,
+                    "year": 2018
+                }
+            ],
+            "acts": [
+                {
+                    "title": "Zen Mother",
+                    "url_1": "https://zenmother.bandcamp.com/"
+                },
+                {
+                    "title": "Nauticult",
+                    "url_1": "https://nauticult.bandcamp.com/"
+                },
+                {
+                    "title": "Worshiprr",
+                    "url_1": "http://worshiprr.bandcamp.com/"
+                }
+            ]
+        },
+        // end of an event
+        // start of an event...
+        {
+            "location": [
+                {
+                    "name": "Kame House",
+                    "address_given": "false",
+                    "address_hint": "In the CD (for address, ask a friend or message a host)",
+                    "street": "",
+                    "state_province": "",
+                    "city": "",
+                    "zipcode": "",
+                    "country": "USA"
+                }
+            ],
+            "age_policy": "All Ages / Alcohol allowed if 21+",
+            "cover": "$5-10 Donation",
+            "time": [
+                {
+                    "doors": "8pm",
+                    "music_start": "9pm",
+                    "music_end": "11:30pm",
+                    "event_end": "12am",
+                    "day": 18,
+                    "month": 5,
+                    "year": 2018
+                }
+            ],
+            "acts": [
+                {
+                    "title": "Joe Waine (tour kickoff!)",
+                    "url_1": "https://joewaineband.bandcamp.com/"
+                },
+                {
+                    "title": "somesurprises",
+                    "url_1": "https://eiderdownrecords.bandcamp.com/album/somesurprises-serious-dreams"
+                },
+                {
+                    "title": "TBA",
+                    "url_1": "#"
+                }
+            ]
+        },
+        // end of an event
+        // start of an event...
+        {
+            "location": [
+                {
+                    "name": "Kame House",
+                    "address_given": "false",
+                    "address_hint": "In the CD (for address, ask a friend or message a host)",
+                    "street": "",
+                    "state_province": "",
+                    "city": "",
+                    "zipcode": "",
+                    "country": "USA"
+                }
+            ],
+            "age_policy": "All Ages / Alcohol allowed if 21+",
+            "cover": "$5-10 Donation",
+            "time": [
+                {
+                    "doors": "8pm",
+                    "music_start": "9pm",
+                    "music_end": "11:30pm",
+                    "event_end": "12am",
+                    "day": 25,
+                    "month": 5,
+                    "year": 2018
+                }
+            ],
+            "acts": [
+                {
+                    "title": "Happy Times Sad Times",
+                    "url_1": "https://happytimessadtimes.bandcamp.com/"
+                },
+                {
+                    "title": "Sleepover Club",
+                    "url_1": "https://sleepoverclub.bandcamp.com/"
+                },
+                {
+                    "title": "Paisley Devil",
+                    "url_1": "https://paisleydevil.bandcamp.com/"
+                }
+            ]
+        },
+        // end of an event
+        // start of an event...
+        {
+            "location": [
+                {
+                    "name": "Kame House",
+                    "address_given": "false",
+                    "address_hint": "In the CD (for address, ask a friend or message a host)",
+                    "street": "",
+                    "state_province": "",
+                    "city": "",
+                    "zipcode": "",
+                    "country": "USA"
+                }
+            ],
+            "age_policy": "All Ages / Alcohol allowed if 21+",
+            "cover": "$5-10 Donation",
+            "time": [
+                {
+                    "doors": "8pm",
+                    "music_start": "9pm",
+                    "music_end": "11:30pm",
+                    "event_end": "12am",
+                    "day": 26,
+                    "month": 5,
+                    "year": 2018
+                }
+            ],
+            "acts": [
+                {
+                    "title": "Research (debut show // past and current members of rose windows, charms, midday veil, and terminator)",
+                    "url_1": "#"
+                },
+                {
+                    "title": "Haunted Horses",
+                    "url_1": "https://hauntedhorses.bandcamp.com/"
+                },
+                {
+                    "title": "Cold Soda",
+                    "url_1": "#"
+                }
+            ]
+        },
+        // end of an event
+                // start of an event...
+        {
+            "location": [
+                {
+                    "name": "Kame House",
+                    "address_given": "false",
+                    "address_hint": "In the CD (for address, ask a friend or message a host)",
+                    "street": "",
+                    "state_province": "",
+                    "city": "",
+                    "zipcode": "",
+                    "country": "USA"
+                }
+            ],
+            "age_policy": "All Ages / Alcohol allowed if 21+",
+            "cover": "$5-10 Donation",
+            "time": [
+                {
+                    "doors": "8pm",
+                    "music_start": "9pm",
+                    "music_end": "11:30pm",
+                    "event_end": "12am",
+                    "day": 15,
+                    "month": 6,
+                    "year": 2018
+                }
+            ],
+            "acts": [
+                {
+                    "title": "Step Dads",
+                    "url_1": "https://step-dads.bandcamp.com/"
+                },
+                {
+                    "title": "Highland Eyeway",
+                    "url_1": "https://highlandeyeway.bandcamp.com/"
+                },
+                {
+                    "title": "Forest Ray",
+                    "url_1": "http://www.soundcloud.com/forestray"
+                }
+            ]
+        },
+        // end of an event
+    ]  
+};
+</script>

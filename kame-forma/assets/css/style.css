@@ -970,7 +970,7 @@ blockquote.alignright {
 .inner {
 	margin-left: auto;
 	margin-right: auto;
-	max-width: 960px;
+	max-width: 1280px;
 }
 
 .site-content {
@@ -989,7 +989,7 @@ blockquote.alignright {
 .comments-area {
 	margin-left: auto;
 	margin-right: auto;
-	max-width: 740px;
+	max-width: 980px;
 }
 
 /**
