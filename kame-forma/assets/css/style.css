@@ -1,6 +1,5 @@
 /**
- * Forma 1.1.1
- * By Just Good Themes - https://justgoodthemes.com/
+ * Kame-Forma 1.0.1
  */
 
 /**
@@ -2019,6 +2018,15 @@ a.post-thumbnail:hover img {
     background-color: #000;
 }
 
+#event-list .event .event-inner-wrapper > div.event-date,
+#event-list .event .event-inner-wrapper > div.acts
+{
+	font-size: 16px;
+	font-weight: 600;
+	color: #000;
+	background-color: #fff;
+}
+
 #event-list .event .event-inner-wrapper > div:last-child {
     margin-bottom: 0;
 }
@@ -2030,8 +2038,8 @@ a.post-thumbnail:hover img {
 }
 
 #event-list .event .acts a {
-	color: #fff;
-	border-bottom: 1px solid #fff;
+	color: #000;
+	border-bottom: 1px solid #000;
 }
 /* Location */
 
@@ -2063,9 +2071,6 @@ a.post-thumbnail:hover img {
 #event-list .event .time {
 }
 
-#event-list .event .time .date {
-
-}
 
 #event-list .event .time .doors {
 
@@ -2236,23 +2241,6 @@ a.post-thumbnail:hover img {
 @media only screen and (max-width: 767px) {
 	#event-list .event {
 	    margin-bottom: 16px;
-	}
-
-	#event-list .event:after {
-	    content: '';
-	    position: absolute;
-	    width: 100%;
-	    height: 1px;
-	    background-color: #000;
-	    top: 100%;
-	    margin: 8px 0;
-	    left: 0;
-	    padding-left: 15px;
-	    padding-right: 15px;
-	}
-
-	#event-list .event:last-child:after {
-		content: none;
 	}
 }
 
