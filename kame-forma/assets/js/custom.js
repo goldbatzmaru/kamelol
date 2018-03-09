@@ -266,9 +266,11 @@
     		if(timeCheck) {
     			var time = value.time[0];
     			var monthYear = [time.year,time.month];
-				if (!searchForArray(monthYears, monthYear)){
-					monthYears.push(monthYear);
-				}
+                if(!isDateInPast(time.month+'-'+time.day+'-'+time.year)){
+                    if (!searchForArray(monthYears, monthYear)){
+                        monthYears.push(monthYear);
+                    }
+                }
     		}
     	});
 
