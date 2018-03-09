@@ -274,13 +274,13 @@
     		}
     	});
 
-    	var filterArea = '<div class="button-group filter-button-group"><button data-filter="*">All</button>';
+    	var filterArea = '<div class="button-group filters-button-group"><button  class="button is-checked" data-filter="*">All</button>';
 
     	$.each(monthYears,function(x, y){
     		var date = new Date(y[0], (y[1]-1));
     		var monthName = getMonthName(date);
     		var monthyear = 'monthyear-' + (date.getMonth()+1) + '-' + date.getFullYear();
-    		var filterButton = '<button data-filter=".' + monthyear + '">'+ monthName +' '+ date.getFullYear()+ '</button>';
+    		var filterButton = '<button class="button" data-filter=".' + monthyear + '">'+ monthName +' '+ date.getFullYear()+ '</button>';
 			filterArea += filterButton;
     	});
 
