@@ -32,34 +32,34 @@
 				</div>
 			</footer><!-- .entry-footer -->
 			{{!-- Everything inside the #author tags pulls data from the author --}}
-			{{#author}}
-			<div class="author-box">
-				<div class="author-info">
-					{{#if profile_image}}
-					<div class="avatar-container">
-						<img src="{{profile_image}}" alt="{{name}}" class="avatar" />
-					</div>
-					{{/if}}
-					<div class="author-details">
-						<h2 class="author-title">About <a href="{{url}}">{{name}}</a></h2>
-						{{#if bio}}
-						<p class="author-description">{{bio}}</p>
-						{{/if}}
-						<div class="author-links">
-							{{#if website}}
-							<a href="{{website}}" target="_blank"><i class="fa-globe" aria-hidden="true"></i><span class="screen-reader-text">Website</span></a>
-							{{/if}}
-							{{#if facebook}}
-							<a href="{{facebook_url}}" target="_blank"><i class="fa-facebook" aria-hidden="true"></i><span class="screen-reader-text">Facebook</span></a>
-							{{/if}}
-							{{#if twitter}}
-							<a href="{{twitter_url}}" target="_blank"><i class="fa-twitter" aria-hidden="true"></i><span class="screen-reader-text">Twitter</span></a>
-							{{/if}}
-						</div>
-					</div>
-				</div><!-- .author-info -->
-			</div><!-- .author-box -->
-			{{/author}}
+			<!--{{#author}}-->
+			<!--<div class="author-box">-->
+				<!--<div class="author-info">-->
+					<!--{{#if profile_image}}-->
+					<!--<div class="avatar-container">-->
+						<!--<img src="{{profile_image}}" alt="{{name}}" class="avatar" />-->
+					<!--</div>-->
+					<!--{{/if}}-->
+					<!--<div class="author-details">-->
+						<!--<h2 class="author-title">About <a href="{{url}}">{{name}}</a></h2>-->
+						<!--{{#if bio}}-->
+						<!--<p class="author-description">{{bio}}</p>-->
+						<!--{{/if}}-->
+						<!--<div class="author-links">-->
+							<!--{{#if website}}-->
+							<!--<a href="{{website}}" target="_blank"><i class="fa-globe" aria-hidden="true"></i><span class="screen-reader-text">Website</span></a>-->
+							<!--{{/if}}-->
+							<!--{{#if facebook}}-->
+							<!--<a href="{{facebook_url}}" target="_blank"><i class="fa-facebook" aria-hidden="true"></i><span class="screen-reader-text">Facebook</span></a>-->
+							<!--{{/if}}-->
+							<!--{{#if twitter}}-->
+							<!--<a href="{{twitter_url}}" target="_blank"><i class="fa-twitter" aria-hidden="true"></i><span class="screen-reader-text">Twitter</span></a>-->
+							<!--{{/if}}-->
+						<!--</div>-->
+					<!--</div>-->
+				<!--</div>&lt;!&ndash; .author-info &ndash;&gt;-->
+			<!--</div>&lt;!&ndash; .author-box &ndash;&gt;-->
+			<!--{{/author}}-->
 		</article><!-- .post -->
 
 		{{!-- Email subscribe form --}}
