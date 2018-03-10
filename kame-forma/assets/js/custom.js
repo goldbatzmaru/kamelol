@@ -248,7 +248,8 @@
 	function isDateInPast(date){
 		date = new Date(date).setHours(0,0,0,0);
 		var currentDate = new Date().setHours(0,0,0,0);
-		if(date > currentDate) {
+
+		if(date >= currentDate) {
 			return false;
 		} else {
 			return true;
@@ -274,7 +275,7 @@
     		}
     	});
 
-    	var filterArea = '<div class="button-group filters-button-group"><button  class="button is-checked" data-filter="*">All</button>';
+    	var filterArea = '<div id="calendar-filter" class="button-group filters-button-group"><button  class="button is-checked" data-filter="*">All</button>';
 
     	$.each(monthYears,function(x, y){
     		var date = new Date(y[0], (y[1]-1));

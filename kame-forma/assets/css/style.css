@@ -1989,6 +1989,19 @@ a.post-thumbnail:hover img {
     margin-bottom: 15px;
 }
 
+#calendar-filter {
+	margin: 0 auto;
+	display: block;
+	width: 70%;
+}
+
+#calendar-filter button {
+	background-color: yellow;
+	border: 1px solid #000;
+	width: 32%;
+	margin: 4px;
+}
+
 #event-list {
 	display: block;
 	width: 91%;
@@ -2192,6 +2205,9 @@ a.post-thumbnail:hover img {
 	.featured-slider .slide-overlay {
 		width: 75%;
 	}
+	#calendar-filter button {
+		width: 48%;
+	}
 }
 
 @media only screen and (max-width: 800px) {
@@ -2353,6 +2369,18 @@ a.post-thumbnail:hover img {
 		margin-top: 1.5em;
 		position: static;
 		text-align: left;
+	}
+	#calendar-filter {
+		width: 90%;
+	}
+
+	#calendar-filter button {
+		width: 100%;
+		position: relative;
+		float: left;
+		height: auto;
+		margin: 0 0 5px;
+		padding: 5px;
 	}
 }
 
