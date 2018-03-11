@@ -245,8 +245,19 @@
 
 	}
 
-	function isDateInPast(date){
-		date = new Date(date).setHours(0,0,0,0);
+    function isAppleDevice(){
+    	var isAppleDevice = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    	return isAppleDevice;
+    }
+
+	function isDateInPast(month, day, year){
+
+		if(isAppleDevice()){
+			var date = new Date(month+'/'+day+'/'+year).setHours(0,0,0,0);
+		} else {
+			var date = new Date(month+'-'+day+'-'+year).setHours(0,0,0,0);
+		}
+
 		var currentDate = new Date().setHours(0,0,0,0);
 
 		if(date >= currentDate) {
@@ -267,7 +278,7 @@
     		if(timeCheck) {
     			var time = value.time[0];
     			var monthYear = [time.year,time.month];
-                if(!isDateInPast(time.month+'-'+time.day+'-'+time.year)){
+                if(!isDateInPast(time.month, time.day, time.year)){
                     if (!searchForArray(monthYears, monthYear)){
                         monthYears.push(monthYear);
                     }
@@ -305,8 +316,7 @@
                 time = value.time[0];
                 dateClasses = getDateClasses(time.month+'-'+time.day+'-'+time.year);
             }
-
-			if(!isDateInPast(time.month+'-'+time.day+'-'+time.year)){
+			if(!isDateInPast(time.month, time.day, time.year)){
 	        	var event = '<li class="event ' + dateClasses +'"><div class = "event-inner-wrapper">';
 	            if(timeCheck){
 	            	var monthName = getMonthName(time.month+'-'+time.day+'-'+time.year);
@@ -350,7 +360,7 @@
 
 	        	if(timeCheck){
 					var schedule = '<div class="time">';
-					// schedule += '<div class="date">'+time['day']+'/'+time['month']+'/'+time['year']+'</div>';
+
 					schedule += '<div class="doors">Doors at '+time.doors+'</div>';
 					schedule += '<div class="duration">'+ time.music_start + ' - ' + time.music_end + '</div></div>';
 					event += schedule;
