@@ -2,12 +2,12 @@
 	<div class="inner">
 		<div class="site-branding">
 			{{#if @blog.logo}}
-			<p class="custom-logo"><a href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a></p>
+			<p class="custom-logo"><a href="http://kame.lol"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a></p>
 			{{/if}}
 			{{#is "index"}}
-			<h1 class="site-title"><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
+			<h1 class="site-title"><a href="http://kame.lol">{{@blog.title}}</a></h1>
 			{{else}}
-			<p class="site-title"><a href="{{@blog.url}}">{{@blog.title}}</a></p>
+			<p class="site-title"><a href="http://kame.lol">{{@blog.title}}</a></p>
 			{{/is}}
 			{{#if @blog.description}}
 			<p class="site-description">{{@blog.description}}</p>
