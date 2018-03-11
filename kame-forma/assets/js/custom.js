@@ -215,8 +215,12 @@
     	}
 	}
 
-	function getDateClasses(date){
-        date = new Date(date);
+	function getDateClasses(month, day, year){
+        if(isAppleDevice()){
+			var date = new Date(month+'/'+day+'/'+year);
+		} else {
+			var date = new Date(month+'-'+day+'-'+year);
+		}
 
         var monthyear = 'monthyear-' + (date.getMonth()+1) + '-' + date.getFullYear();
         var day = 'day-' + date.getDate();
@@ -225,9 +229,8 @@
         return monthyear + ' ' + day;
 	}
 
-	function getMonthName(date){
-
-        date = new Date(date);
+	function getMonthName(monthNum){
+		console.log('MONTH BEFORE: ' + monthNum);
         var month = [];
         month[0] = "January";
         month[1] = "February";
@@ -241,7 +244,8 @@
         month[9] = "October";
         month[10] = "November";
         month[11] = "December";
-        return month[date.getMonth()];
+
+        return month[monthNum];
 
 	}
 
@@ -290,7 +294,7 @@
 
     	$.each(monthYears,function(x, y){
     		var date = new Date(y[0], (y[1]-1));
-    		var monthName = getMonthName(date);
+    		var monthName = getMonthName(date.getMonth());
     		var monthyear = 'monthyear-' + (date.getMonth()+1) + '-' + date.getFullYear();
     		var filterButton = '<button class="button" data-filter=".' + monthyear + '">'+ monthName +' '+ date.getFullYear()+ '</button>';
 			filterArea += filterButton;
@@ -314,12 +318,12 @@
 
             if(timeCheck) {
                 time = value.time[0];
-                dateClasses = getDateClasses(time.month+'-'+time.day+'-'+time.year);
+                dateClasses = getDateClasses(time.month, time.day, time.year);
             }
 			if(!isDateInPast(time.month, time.day, time.year)){
 	        	var event = '<li class="event ' + dateClasses +'"><div class = "event-inner-wrapper">';
 	            if(timeCheck){
-	            	var monthName = getMonthName(time.month+'-'+time.day+'-'+time.year);
+	            	var monthName = getMonthName(time.month-1);
 	                event += '<div class="event-date">'+monthName+' '+time.day+', '+time.year+'</div>';
 	            }
 	        	if(value.title != null){
