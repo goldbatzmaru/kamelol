@@ -230,7 +230,6 @@
 	}
 
 	function getMonthName(monthNum){
-		console.log('MONTH BEFORE: ' + monthNum);
         var month = [];
         month[0] = "January";
         month[1] = "February";
