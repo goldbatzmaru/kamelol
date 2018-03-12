@@ -812,7 +812,7 @@ blockquote.alignright {
 	height: 24px;
 	position: absolute;
 	left: 50%;
-	margin-left: -12px;
+	margin-left: -16px;
 	margin-top: -12px;
 	top: 50%;
 	width: 24px;
@@ -829,16 +829,16 @@ blockquote.alignright {
 
 .icon-plus:before {
 	height: 2px;
-	margin-left: -6px;
-	margin-top: -1px;
-	width: 12px;
+    margin-left: -6px;
+    margin-top: 1px;
+    width: 16px;
 }
 
 .icon-plus:after {
-	height: 12px;
-	margin-left: -1px;
-	margin-top: -6px;
-	width: 2px;
+	height: 16px;
+    margin-left: 1px;
+    margin-top: -6px;
+    width: 2px;
 }
 
 /* Text meant only for screen readers */
@@ -1078,6 +1078,10 @@ blockquote.alignright {
 	width: 40px;
 }
 
+.toggle-search {
+    font-size: 17px;
+}
+
 #show-sidebar,
 #show-search {
 	background-color: #fff;
@@ -1162,7 +1166,7 @@ blockquote.alignright {
 
 #hide-sidebar,
 #hide-search {
-	background-color: #ff0000;
+	background-color: transparent;
 	color: #111;
 	position: absolute;
 	right: 0;
