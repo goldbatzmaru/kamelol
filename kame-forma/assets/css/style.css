@@ -812,8 +812,8 @@ blockquote.alignright {
 	height: 24px;
 	position: absolute;
 	left: 50%;
-	margin-left: -16px;
-	margin-top: -12px;
+    margin-left: -14px;
+    margin-top: -13px;
 	top: 50%;
 	width: 24px;
 }
@@ -1855,7 +1855,7 @@ a.post-thumbnail:hover img {
 .widget {
 	color: #000;
 	font-size: 15px;
-	margin-bottom: 2.85714em;
+	margin-bottom: 2em;
 	letter-spacing: 1px;
 }
 
@@ -1978,10 +1978,14 @@ a.post-thumbnail:hover img {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	float: left;
-	margin-bottom: 4px;
+    margin-bottom: 15px;
 	padding-left: 4px;
 	width: 33.333%;
-    height: 60px;
+    height: 120px;
+}
+.widget-instagram .instagram-item img {
+    height: 120px;
+	width: 120px    
 }
 
 /**
